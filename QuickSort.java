@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class QuickSort {
     public static void quickSort(int[] array, int low, int high) {
         if (array.length == 0) return;
@@ -33,7 +35,10 @@ public class QuickSort {
             quickSort(array, i, high);
     }
     public static void main(String[] args) {
-        int[] x = { 8, 0, 4, 7, 3, 7, 10, 12, -3 };
+        int[] x = new int[10];
+        for (int i=0;i<x.length;i++) {
+            x[i] =(int) (Math.random() * 201 - 100);
+        }
         System.out.println("\nBefore Sort");
         for(int i=0;i<x.length;i++) {
             System.out.println(x[i]);
